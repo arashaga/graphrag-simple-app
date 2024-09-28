@@ -1,0 +1,10 @@
+# Ignore environment file
+.env
+
+# Ignore Jupyter Notebook files
+global_search.ipynb
+local_search.ipynb
+
+# Ignore cache directories
+cache/
+__pycache__/

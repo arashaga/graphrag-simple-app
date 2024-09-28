@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pandas
+tiktoken
+httpx
+python-dotenv
+graphrag
+openai
+pydantic
+# Add any other dependencies your backend requires
