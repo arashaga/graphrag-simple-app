@@ -8,3 +8,4 @@ local_search.ipynb
 # Ignore cache directories
 cache/
 __pycache__/
+index/
