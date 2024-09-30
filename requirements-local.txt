@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pandas
+tiktoken
+httpx
+python-dotenv
+graphrag
+openai
+pydantic
+streamlit
+httpx
+openai
