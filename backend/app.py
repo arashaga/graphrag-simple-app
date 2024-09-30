@@ -38,7 +38,7 @@ def initialize_search_engines():
     embedding_model = os.getenv("GRAPHRAG_EMBEDDING_MODEL")
 
     #NOTE: the input directory when run it in my local machine was ../ but with docker should be ./
-    input_dir = "output/20240827-100424/artifacts"
+    input_dir = "../output/20240930-102622/artifacts"
     lancedb_uri = f"{input_dir}/lancedb"
 
     # Initialize the local search engine
