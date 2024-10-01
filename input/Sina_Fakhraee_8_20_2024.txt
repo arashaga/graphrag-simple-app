@@ -1,0 +1,233 @@
+Sina Fakhraee  
+ 
+ Sina.fakhraee@gmail.com   https://www.linkedin.com/in/sina -fakhraee -ph-d-2798ba70/   (517) 974 -8437  
+ Enterprise AI/ML Cloud Solution Architect  @ Microsoft   
+EDUCATION   
+ 
+• Wayne State Un iversity                                              Detroit, MI
+Ph.D. , May 2012  
+GPA 3.7/4.0  
+ 
+• Michigan State University                   E. Lansing, MI
+M.S., May 2007  
+GPA 3.4/4.0  
+ 
+• Michigan State University                              E.  Lansing, MI
+B.S., Dec 2003  
+GPA 3.4/4.0  
+ 
+ 
+ 
+PROFESSIONAL EXPERIENCE   
+ 
+• Microsoft : 
+                                                                                                                                        Detroit , MI 
+• Enterprise  GenAI  Cloud Solution Architect                                    March  2022-Present  
+• Princi pal Data Scientist                                                                     April 2020 – Marc h 2022     
+• Ford Motor Company :                                                                                              Dearborn , MI 
+• Tech Lead,  Sr. ML Engineer,                             December 2015 –April 2020  
+• Team Lead , Sr. Software Eng, Analytics Solution Architect       May 2013 – December 2015  
+• Research and datamining Scientist ,                                                      Sep. 2011 – May 2013  
+  
+ 
+ 
+• Wayne State University :                                                                                                Detroit , MI 
+• Part-time faculty                                                                                    Sep. 2012  – May 2015  
+• Graduate Research and Teaching Assistant               Sep. 2007 – Sep.  2011 
+• Classes taught at WSU: Data Mining, C++ on Unix, Data Structures, Semantic Web  
+  
+• IDEACore:                                                                                                              Birmingham, MI  
+• Machine Learning  and NLP Consultant                                                 Nov. 2015 – Sep 2016  
+  
+ 
+ 
+ 
+ 
+   
+Selected Microsoft Projects  successfully  completed for strategic custome rs   
+ 
+• Global Conversational AI Chatbot:  
+I led and owned the most expansive Azure OpenAI production deployment for one of Microsoft’s 
+strategic customers, successfully rolling out a global conversational chatbot to over 100,000 end -
+users. Built on Azure OpenAI and enhanced by Cognitive Search and other AI services like Form 
+Recognizer, this project was a technically complex endeavor, especially given the challenges 
+associated with ensuring data privacy and model integrity.  The successful delivery of this project 
+led the customer to adopt the reference architecture and implementation developed during this 
+engagement, paving the way for the deployment of several additional conversational chatbots 
+following this blueprint.   
+ 
+• Multi -Agent Solution for Supply Chain Hotline Issues :  
+I successfully led the development of a multi -agent solution to address and summarize supply chain 
+"Hotline" issues for a Microsoft strategic customer’s global purchase supply chain. This solution 
+was integrated with the customer’s existing Insight Application, a critical tool used by their Supply 
+Chain Command Center to monitor and track issues reported by plants or suppliers that could 
+potentially impact vehicle production if unresolved.  The new system automatically summarized 
+incoming issues and augmented these summaries with relevant data, including affected parts, 
+contact information, inventory levels, and expected impact dates. This automation significantly 
+reduced the manual steps previously required to gather and analyze this information . 
+ 
+• Real -Time Speech -to-Text Chatbot for Motorsports Event Analysis :  
+I led the design and development of a conversational AI chatbot for a Microsoft strategic 
+customer’s Motorsports division. The project aimed to enable their race teams' analysts to query 
+real-time speech -to-text transcriptions during NASCAR events. The solution was successfully 
+deployed to production and significantly enhanced the team's ability to analyze and react to race 
+data in real time.  
+To develop this solution, I utilized the Retrieval -Augmented Generation (RAG) pattern and 
+leveraged Azure Databricks for processing large volumes of real -time data streams at scale. Azure 
+AI Search was implemented for fast write and read capabilities, while Azure OpenAI provided 
+generative AI functionalities to support complex, context -aware queries.   
+ 
+• Vehicle Mechatronic Embedded Controls (VMEC) Chatbot :  
+I successfully led the development of a chatbot designed to assist in filtering and analyzing 
+calibration test data files across multiple vehicles for a customer’s Vehicle Mechatronic Embedded 
+Controls (VMEC) team. The chatbot leveraged AI to automate the process of identifying and 
+investigating specific examples of undesirable behavior in vehicle signals, significantly 
+streamlining the workflow for calibrators.  
+ 
+• ML Solution for Distribution Operations - Wire Down Detection :  
+I led the engagement for a Microsoft strategic customer, overseeing the conversion of their on -
+premise rule -based system for wire down detection into a modern machine learning (ML) solution 
+on Azure.  The Azure Machine Learning solution delivered a significant business impact, saving the 
+customer approximately $3 million annually by reducing unnecessary utility crew dispatches to 
+non-wire down events.  The new ML model improved predictability to 87%, a 40% increase over 
+the legacy rule -based system.  
+    
+Selected Ford Motor Company Projects   
+ 
+• AI/ML Enablement Platform for the Enterprise : 
+• As a product owner for AI/ML enablement at Ford, I helped defin ing both the 
+short -term and long -term vision to empower data scientists to conduct their work 
+more effectively and efficiently.   
+• Democratizing AI/ML too ls for end-to-end ML project s lifecycle  
+▪ Developing data pipelines for data cleansing, feature engineering, feature generation 
+and data management  
+▪ Developing ML model ing capabilities:  
+• Model development  
+• Model versioning  
+• Model management  
+▪ Developing ML model deployment capabilities  
+• Realtime inference  
+• Batch inference  
+• Model monitoring  
+• Some of the tools and technologies used to build this platform:  
+▪ Docker technologies  
+▪ Kubernetes  
+▪ Tensorflow, XGBoost  
+▪ Seldon Core  
+▪ Argo workflow  
+▪ Pachyderm  
+ 
+ 
+• Image processing/Object detection for Ford Performance for NASCAR events : 
+• Trained deep learning model using Caffe DL framework to detect certain features 
+in the car for detection.  
+• Developed a framework to automate the model training prior to the racing events   
+• Developed a runtime framework to deploy the trained model for real -time object detection 
+during the racing events  
+▪ Used micro services and docker/container technology to expose the model for real -
+time consumption by the downstream systems  
+ 
+ 
+• Containerization of cplex optimization engine for enterprise cloud -native systems : 
+• Developed micro -service layer to expose cplex functionalities  
+• Docker -ized the cplex service  
+• Deployed the cplex container on  kubernetese cluster     
+ 
+• Machine Learning and NLP consultant to the development team of BTS (Bit Targeting 
+System) https://www.bidtarget.org/ : 
+• Developed a matching system using LSA (Latent Semantic Analysis) technique to enhance 
+the matching and scoring between firms and the government business opportunities    
+ 
+ 
+  Selected  Publications  and Presentations   
+ 
+• Co-author of Azure Machine Learning Engineering book https://www.amazon.com/Azure -Machine -Learning -Engineering -fine-tune-ebook/dp/B0BM4ZG5ZD?ref_=ast_author_mpb   
+• Keynote speaker at IEE ai4i/HCCAI/TransAI 2020 : I presented a large -scale  demand 
+forecasting solution for a retail customer which I led the design, development and the deployment 
+to production. It can be found at  https://semanticcomputing.wixsite.com/ai4i2020/keynotes  
+   
+• Effective Keyword Search over Relational Databases Considering Keywords Proximity and 
+Keywords N -grams,  Proceedings of the International Workshop on Text -based Information 
+Retrieval – DEXA -TIR’11, 2011  
+  
+• TupleRecommender: A Recommender System for Relational Databases,  Proceedings of the 
+International Workshop on Recommender Systems Meet Databases – DEXA - RsmeetDB’11  
+ 
+• DBSemSXplorer: Semantic -based Keyword Search System over Relational Databases for 
+Knowledge Discovery , Proceedings of the Third International Workshop on Keyword Search on 
+Structured Data  – SIGMOD - KEYS '12  
+ 
+• Digital Library to Facilitate Urban Environmental Management,  Proceedings of the 
+Watershed Management Conference: Innovations in Watershed Management Under Land Use and 
+Climate Change, Madison Wisconsin, August 2010  
+ 
+ 
+ 
+TECHNICAL SKILLS   
+• Machine Learning and Data Science:  
+• Algorithms:  
+▪ Classification, anomaly detection, clustering     
+• Frameworks:  
+▪ Python, Scikit -learn, Tensorflow, Keras, Spark Mlib  
+• Cloud Platforms:  
+▪ Azure Machine Learning Service (AMLS)  
+▪ Databricks Machine Learning  
+▪ MLOps using Azure and Github/Azure Devops  
+• Big Data : 
+• Spark , Hadoop Ecosystem   
+• Software Engineering:  
+• Programming languages: Python, Java, C++/C, C#, Angular , Node.js, Swift  
+• Frameworks: J2EE, Spring, .NET   
+• Design Patterns/Approaches : MVC, Micro -service oriented architectures, twelve -factor 
+app 
+• Tools, IDEs, Technologies: Eclipse, STS, Visual Studio  
+• Real -time Streaming, Messaging Systems:  Kafka, RabitMQ  
+• Cloud Computing Platforms: Azure, PCF, AWS, Bluemix  
+• ML Model Deployment: Deploy as a container, deploy as a micro -service  
+   
+ 
+ 
+Certificates   
+• 14 Azure certifications in doing Machine Learning on Azure. You can see the certifications @   
+https://www.credly.com/users/sina -fakhraee/badges  
+ 
+• Applied Machine Learning in Python, issued by University of Michigan  certificate @ 
+https://www.coursera.org/account/accomplishments/verify/C48JH9HU2G3B  
+ 
+• Neural Networks and Deep Learning, Issued by deeplearning.ai  certificate @ 
+https://www.coursera.org/account/accomplishments/records/K8LC5H27RV52  
+ 
+• Improving Deep Neural Networks: Hyperparameter tuning, Regularization and 
+Optimization , Issued by deeplearning.ai  certificate @  
+https://www.coursera.org/account/accomplishments/certificate/YRP4BAHWV4KN  
+ 
+• Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep 
+Learning , Issued by deeplearning.ai  certificate @  
+https://www.coursera.org/account/accomplishments/certificate/47V5J3T3BNB2  
+ 
+• Convolutional Neural Networks in TensorFlow , Issued by deeplearning.ai  certificate @  
+https://www.coursera.org/account/accomplishments/certificate/5SFEFXUZ42AX  
+ 
+• Natural Language Processing in TensorFlow  certificate @  
+https://www.coursera.org/account/accomplishments/certificate/Q7N8HDUDURTN  
+ 
+• Sequences, Time Series and Prediction  certificate @  
+https://www.coursera.org/account/accomplishments/certificate/J2D9MR7UK2YQ  
+ 
+• TensorFlow in Practice Specialization  
+https://www.coursera.org/account/accomplishments/specialization/certificate/CWKKJNCTRPDB  
+ 
+ 
+ 
+Honors, Awards and Recognitions    
+ 
+• Ford Technology Innovation Award 2013 & 2014  
+• Dean’s List:  Fall 2000, Spring 2001, Fall 2001    
+• Brown W. R. Michigan State University Engineering Scholarship: Fall 2002, Winter 2003  
+ 
+References     
+ 
+• Prof. Farshad Fotouhi, Dean of College of Engineering at WSU . Email:  fotouhi@wayne.edu   
+• Joe Craig, President and CEO at IDEACore. Email:  joe@ideacore.com  
+• Bardia Madani  Analytics Manager at Ford Motor Company. Email: bmadani@ford.com  
+ 

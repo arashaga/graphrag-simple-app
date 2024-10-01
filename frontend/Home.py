@@ -5,6 +5,8 @@ import os
 # Set the FastAPI backend URL
 API_URL = os.getenv("API_URL", "http://localhost:8000/query")
 
+st.set_page_config(page_title="GraphRAG Chatbot", page_icon="🤖")
+
 st.title("GraphRAG Chatbot")
 
 # Initialize session state for messages
