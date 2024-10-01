@@ -57,6 +57,7 @@ if uploaded_file is not None:
         st.error("Unsupported file type.")
 
     # Button to start indexing
+    # Inside the Start Indexing button click handler
     if st.button("Start Indexing") and not st.session_state['indexing_in_progress']:
         st.session_state['indexing_in_progress'] = True
         indexing_status_placeholder = st.empty()
@@ -72,6 +73,7 @@ if uploaded_file is not None:
                 indexing_status_placeholder.error(f"Indexing failed: {e}")
             finally:
                 st.session_state['indexing_in_progress'] = False
+
 
 # Display list of processed indexes
 if st.session_state['processed_indexes']:

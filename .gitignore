@@ -9,3 +9,5 @@ local_search.ipynb
 cache/
 __pycache__/
 index/
+input/
+output/

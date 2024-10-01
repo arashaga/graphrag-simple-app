@@ -18,9 +18,9 @@ if os.name == 'nt':
 # **Apply nest_asyncio to allow nested event loops**
 nest_asyncio.apply() 
 
-async def run_build_index():
+def run_indexing():
     # Set the root directory to the path where your data and settings.yaml are located
-    root_dir = '../'
+    root_dir = './'
     root = Path(root_dir).resolve()
     print("root directory: ",root)
 
@@ -49,16 +49,29 @@ async def run_build_index():
 
 
 
-    # Run build_index
-    outputs = await build_index(
-        config=config,
-        run_id=run_id,
-        is_resume_run=False,
-        is_update_run=False,
-        memory_profile=False,
-        progress_reporter=progress_reporter,
-        emit=[],
-    )
+    # Define an async function to run build_index
+    async def run_build_index():
+        outputs = await build_index(
+            config=config,
+            run_id=run_id,
+            is_resume_run=False,
+            is_update_run=False,
+            memory_profile=False,
+            progress_reporter=progress_reporter,
+            emit=[],
+        )
+        return outputs
+
+    # Create a new event loop and set it as the current event loop
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
+    # Run the async function in the event loop
+    try:
+        outputs = loop.run_until_complete(run_build_index())
+    finally:
+        # Close the event loop
+        loop.close()
 
     # Handle outputs and check for errors
     encountered_errors = any(
@@ -70,13 +83,3 @@ async def run_build_index():
         raise Exception("Indexing failed due to errors.")
     else:
         print("Indexing completed successfully.")
-
-def run_indexing():
-    """
-    Synchronously run the asynchronous build_index function.
-    """
-    try:
-        asyncio.run(run_build_index())
-    except Exception as e:
-        print(f"Error running build_index: {e}")
-        raise
