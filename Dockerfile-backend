@@ -16,20 +16,20 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/ ./
 
 # Copy the artifacts required by the backend, including lancedb
-COPY output/20240827-100424/artifacts/ ./output/20240827-100424/artifacts/
+COPY output/20240930-102622/artifacts ./output/20240930-102622/artifacts
 
 # Copy the .env file
-COPY backend/.env ./.env
+# COPY backend/.env ./.env
 
 # Expose the backend port
 EXPOSE 8000
 
 # Add entrypoint script to adjust permissions
-COPY ./backend/backend_entrypoint.sh /app/entrypoint.sh
-RUN chmod +x /app/entrypoint.sh
+# COPY ./backend/backend_entrypoint.sh /app/entrypoint.sh
+# RUN chmod +x /app/entrypoint.sh
 
 # Set the entrypoint
-ENTRYPOINT ["/app/entrypoint.sh"]
+#ENTRYPOINT ["/app/entrypoint.sh"]
 
 # Run the backend application
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]

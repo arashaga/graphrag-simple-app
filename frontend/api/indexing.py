@@ -6,10 +6,7 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 import nest_asyncio
-from graphrag.index.api import build_index
-from graphrag.config import load_config, resolve_paths, enable_logging_with_config
-from graphrag.index.progress.load_progress_reporter import load_progress_reporter
-from graphrag.index.progress.types import ReporterType
+
 
 # **Set the event loop policy for Windows at module level**
 if os.name == 'nt':
@@ -19,6 +16,10 @@ if os.name == 'nt':
 nest_asyncio.apply() 
 
 async def run_build_index():
+    from graphrag.index.api import build_index
+    from graphrag.config import load_config, resolve_paths, enable_logging_with_config
+    from graphrag.index.progress.load_progress_reporter import load_progress_reporter
+    from graphrag.index.progress.types import ReporterType
     # Set the root directory to the path where your data and settings.yaml are located
     root_dir = '../'
     root = Path(root_dir).resolve()
@@ -45,7 +46,7 @@ async def run_build_index():
     enable_logging_with_config(config, verbose=True)
 
     # Create a progress reporter (options: 'silent', 'rich')
-    progress_reporter = load_progress_reporter(ReporterType.RICH)
+    progress_reporter = load_progress_reporter(ReporterType.PRINT)
 
 
 

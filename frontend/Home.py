@@ -1,8 +1,9 @@
 import streamlit as st
 import httpx
 import os
-
+#from dotenv import load_dotenv
 # Set the FastAPI backend URL
+#load_dotenv()
 API_URL = os.getenv("API_URL", "http://localhost:8000/query")
 
 st.set_page_config(page_title="GraphRAG Chatbot", page_icon="🤖")

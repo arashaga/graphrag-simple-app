@@ -1,12 +1,9 @@
 import streamlit as st
 import os
-import time
 from pathlib import Path
-from dotenv import load_dotenv
 import PyPDF2
-
 import sys
-from pathlib import Path
+import concurrent.futures
 
 # Add the 'frontend' directory to sys.path
 frontend_dir = Path(__file__).resolve().parent.parent
@@ -24,6 +21,47 @@ if 'indexing_in_progress' not in st.session_state:
 
 if 'processed_indexes' not in st.session_state:
     st.session_state['processed_indexes'] = []
+
+if 'indexing_status_message' not in st.session_state:
+    st.session_state['indexing_status_message'] = ''
+
+if 'indexing_future' not in st.session_state:
+    st.session_state['indexing_future'] = None
+
+# Display the indexing status
+if st.session_state['indexing_in_progress']:
+    st.info("Indexing in progress...")
+else:
+    if st.session_state['indexing_status_message']:
+        if "failed" in st.session_state['indexing_status_message'].lower():
+            st.error(st.session_state['indexing_status_message'])
+        else:
+            st.success(st.session_state['indexing_status_message'])
+
+# Display list of processed indexes
+if st.session_state['processed_indexes']:
+    st.write("### Processed Indexes:")
+    for idx in st.session_state['processed_indexes']:
+        st.write(f"- {idx}")
+
+# Check if indexing has completed
+if st.session_state['indexing_future'] is not None:
+    if st.session_state['indexing_future'].done():
+        try:
+            result = st.session_state['indexing_future'].result()
+            st.session_state['indexing_status_message'] = "Indexing complete."
+            # Append the processed file to the list
+            if 'last_processed_file' in st.session_state:
+                st.session_state['processed_indexes'].append(st.session_state['last_processed_file'])
+        except Exception as e:
+            st.session_state['indexing_status_message'] = f"Indexing failed: {e}"
+        finally:
+            st.session_state['indexing_in_progress'] = False
+            st.session_state['indexing_future'] = None
+        st.experimental_rerun()
+    else:
+        # If the future is not done, refresh the page after a short delay
+        st.experimental_rerun()
 
 # File upload
 uploaded_file = st.file_uploader("Upload a TXT or PDF file", type=['txt', 'pdf'])
@@ -56,27 +94,27 @@ if uploaded_file is not None:
     else:
         st.error("Unsupported file type.")
 
-    # Button to start indexing
-    # Inside the Start Indexing button click handler
-    if st.button("Start Indexing") and not st.session_state['indexing_in_progress']:
+    # Store the last processed file name
+    st.session_state['last_processed_file'] = txt_file_path.name
+
+    # Disable the Start Indexing button if indexing is in progress
+    start_indexing_button = st.button(
+        "Start Indexing",
+        disabled=st.session_state['indexing_in_progress']
+    )
+
+    if start_indexing_button and not st.session_state['indexing_in_progress']:
         st.session_state['indexing_in_progress'] = True
-        indexing_status_placeholder = st.empty()
-        indexing_status_placeholder.info("Indexing in progress...")
-        with st.spinner("Indexing started. Please wait..."):
-            try:
-                # Run the indexing process synchronously
-                run_indexing()
-                # Update the list of processed indexes
-                st.session_state['processed_indexes'].append(txt_file_path.name)
-                indexing_status_placeholder.success("Indexing complete.")
-            except Exception as e:
-                indexing_status_placeholder.error(f"Indexing failed: {e}")
-            finally:
-                st.session_state['indexing_in_progress'] = False
+        st.session_state['indexing_status_message'] = "Indexing in progress..."
 
-
-# Display list of processed indexes
-if st.session_state['processed_indexes']:
-    st.write("### Processed Indexes:")
-    for idx in st.session_state['processed_indexes']:
-        st.write(f"- {idx}")
+        # Run the indexing process in a separate process
+        executor = concurrent.futures.ProcessPoolExecutor(max_workers=1)
+        future = executor.submit(run_indexing)
+        st.session_state['indexing_future'] = future
+        st.experimental_rerun()
+else:
+    # No file uploaded, disable the Start Indexing button
+    st.button(
+        "Start Indexing",
+        disabled=True
+    )
